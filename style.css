@@ -1,0 +1,91 @@
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#0f172a,#4c1d95,#2563eb,#0f172a);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+color:white;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.container{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 25px rgba(0,255,255,.3);
+}
+
+button{
+padding:12px 20px;
+margin:8px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.board{
+display:grid;
+grid-template-columns:repeat(3,100px);
+gap:10px;
+margin:20px auto;
+}
+
+.cell{
+width:100px;
+height:100px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2rem;
+background:rgba(255,255,255,.12);
+border-radius:12px;
+cursor:pointer;
+}
+
+.cell:hover{
+transform:scale(1.05);
+}
+
+#countdown{
+position:fixed;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+background:rgba(0,0,0,.85);
+z-index:999;
+}
+
+#countText{
+font-size:120px;
+text-shadow:0 0 20px cyan;
+}
+
+.popup{
+position:fixed;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+background:rgba(0,0,0,.8);
+}
+
+.popup-card{
+background:#111;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}

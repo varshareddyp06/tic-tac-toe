@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeonTac Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div id="difficulty">
+<h1>🎮 NeonTac Pro</h1>
+<h2>Select Difficulty</h2>
+<button onclick="setDifficulty('Easy')">Easy</button>
+<button onclick="setDifficulty('Medium')">Medium</button>
+<button onclick="setDifficulty('Hard')">Hard</button>
+</div>
+
+<div id="mode" style="display:none;">
+<h2>Select Mode</h2>
+<button onclick="startGame('pvp')">👤 Player vs Player</button>
+<button onclick="startGame('ai')">🤖 Player vs Computer</button>
+</div>
+
+<div id="countdown" style="display:none;">
+<h1 id="countText">3</h1>
+</div>
+
+<div id="game" style="display:none;">
+<h3 id="info"></h3>
+<div id="board" class="board"></div>
+<button onclick="resetBoard()">Restart</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
